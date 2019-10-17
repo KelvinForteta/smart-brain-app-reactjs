@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bd6d14d-1298-47cd-a91b-b194ff941af1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Logo/Logo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Logo/brain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ImageLinkForm/ImageLinkForm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ImageLinkForm/ImageLinkForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Rank/Rank.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logo/Logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Logo/Logo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -36,7 +41,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -84,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571327688539</updated>
       <workItem from="1571327693936" duration="2024000" />
-      <workItem from="1571329873415" duration="2242000" />
+      <workItem from="1571329873415" duration="7243000" />
     </task>
     <servers />
   </component>
