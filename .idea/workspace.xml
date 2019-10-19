@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bd6d14d-1298-47cd-a91b-b194ff941af1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/face-recognition-brain.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/Register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Register/Register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Auth/SignIn/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/SignIn/SignIn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +34,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.12.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Logo" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -84,7 +90,8 @@
       <option name="presentableId" value="Default" />
       <updated>1571327688539</updated>
       <workItem from="1571327693936" duration="2024000" />
-      <workItem from="1571329873415" duration="17283000" />
+      <workItem from="1571329873415" duration="23274000" />
+      <workItem from="1571426426943" duration="8048000" />
     </task>
     <servers />
   </component>
