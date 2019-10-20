@@ -27,22 +27,43 @@ const app = new Clarifai.App({
     apiKey: '7c7587cf05404bbc9b7d347c33d63f7b'
 });
 
+const initialState = {
+    input: '',
+    imageUrl: '',
+    box: {},
+    route: 'SignIn',
+    isSignedIn: false,
+    user:  {
+        id: 0,
+        name: '',
+        email: '',
+        entries: 0,
+        joined: ''
+    }
+};
+
 class App extends Component {
 
     constructor(){
         super();
-        this.state = {
-            input: '',
-            imageUrl: '',
-            box: {},
-            route: 'SignIn',
-            isSignedIn: false
-        }
+        this.state = initialState
     }
+
+    loadUser = (data) => {
+        this.setState({
+            user: {
+                id: data.id,
+                name: data.name,
+                email: data.email,
+                entries: data.entries,
+                joined: data.joined
+        }}) ;
+
+    };
 
     onRouteChange = (route) => {
         if(route === 'SignIn'){
-            this.setState({isSignedIn: false});
+            this.setState({initialState});
         }else if(route === 'home'){
             this.setState({isSignedIn: true});
         }
@@ -71,11 +92,25 @@ class App extends Component {
         this.setState({input: event.target.value});
     };
 
-    onButtonSubmit = () => {
+    onPictureSubmit = () => {
         this.setState({imageUrl: this.state.input});
 
         app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
-            .then(response => this.displayFaceBox(this.calculateFaceDetection(response)))
+            .then(response => {
+                if(response){
+                    fetch('http://localhost:3001/image', {
+                        method: 'put',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({id: this.state.user.id})
+                    })
+                        .then(response => response.json())
+                        .then(count => {
+                            this.setState(Object.assign(this.state.user, {entries: count}))
+                        }
+                        ).catch(console.log);
+                }
+                this.displayFaceBox(this.calculateFaceDetection(response))
+            })
             .catch(err => console.log(err));
     };
 
@@ -92,16 +127,16 @@ class App extends Component {
           { route === 'home'
               ? <div>
               <Logo/>
-              <Rank/>
-              <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
+              <Rank entries={this.state.user.entries} name={this.state.user.name}/>
+              <ImageLinkForm onInputChange={this.onInputChange} onPictureSubmit={this.onPictureSubmit}/>
               <FaceRecognition box={box} imageUrl={imageUrl} />
           </div>
               :
               (
                   this.state.route === 'SignIn' ?
-                  <SignIn onRouteChange={this.onRouteChange}/>
+                  <SignIn loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
                   :
-                  <Register onRouteChange={this.onRouteChange}/>
+                  <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
               )
 
           }

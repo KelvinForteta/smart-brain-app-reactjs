@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bd6d14d-1298-47cd-a91b-b194ff941af1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/face-recognition-brain.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Auth/Register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Register/Register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Auth/SignIn/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/SignIn/SignIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ImageLinkForm/ImageLinkForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageLinkForm/ImageLinkForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Rank/Rank.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rank/Rank.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +88,7 @@
       <updated>1571327688539</updated>
       <workItem from="1571327693936" duration="2024000" />
       <workItem from="1571329873415" duration="23274000" />
-      <workItem from="1571426426943" duration="8048000" />
+      <workItem from="1571426426943" duration="23366000" />
     </task>
     <servers />
   </component>
