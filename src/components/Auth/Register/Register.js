@@ -30,7 +30,7 @@ class Register extends Component {
           password: this.state.password
       } ;
 
-      fetch('http://localhost:3001/register', {
+      fetch('https://smart-brain-api-server.herokuapp.com/register', {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify(userData)
@@ -40,8 +40,12 @@ class Register extends Component {
               if(data === 'failed'){
                   console.log('Error occurred')
               }else{
-                 this.props.loadUser(data);
-                  this.props.onRouteChange('home');
+                  if(data.id){
+                      this.props.loadUser(data);
+                      this.props.onRouteChange('home');
+                  }else{
+                      console.log('Please all fields are required.')
+                  }
               }
           })
     };

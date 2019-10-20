@@ -26,7 +26,7 @@ class SignIn extends Component{
 
         let status;
 
-        fetch('http://localhost:3001/signin', {
+        fetch('https://smart-brain-api-server.herokuapp.com/signin', {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'
@@ -39,8 +39,13 @@ class SignIn extends Component{
             })
             .then((data) => {
                 if(status === 200){
-                    this.props.loadUser(data);
-                    this.props.onRouteChange('home');
+                    if(data.id){
+                        this.props.loadUser(data);
+                        this.props.onRouteChange('home');
+                    }else{
+                        console.log('Please fill in the required fields')
+                    }
+
                 }else{
                     console.log(data)
                 }

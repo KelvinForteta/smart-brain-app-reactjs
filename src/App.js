@@ -6,7 +6,6 @@ import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import Particles from 'react-particles-js';
-import Clarifai from 'clarifai';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import SignIn from './components/Auth/SignIn/SignIn';
 import Register from './components/Auth/Register/Register';
@@ -22,10 +21,6 @@ const particlesOptions = {
         }
     }
 };
-
-const app = new Clarifai.App({
-    apiKey: '7c7587cf05404bbc9b7d347c33d63f7b'
-});
 
 const initialState = {
     input: '',
@@ -94,24 +89,28 @@ class App extends Component {
 
     onPictureSubmit = () => {
         this.setState({imageUrl: this.state.input});
-
-        app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
-            .then(response => {
-                if(response){
-                    fetch('http://localhost:3001/image', {
-                        method: 'put',
-                        headers: {'Content-Type': 'application/json'},
-                        body: JSON.stringify({id: this.state.user.id})
-                    })
-                        .then(response => response.json())
-                        .then(count => {
-                            this.setState(Object.assign(this.state.user, {entries: count}))
-                        }
-                        ).catch(console.log);
-                }
-                this.displayFaceBox(this.calculateFaceDetection(response))
+            fetch('https://smart-brain-api-server.herokuapp.com/fetchClarifaiApi', {
+                method: 'post',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({input: this.state.input})
             })
-            .catch(err => console.log(err));
+                .then(response => response.json())
+                .then(data => {
+                    if(data){
+                        this.displayFaceBox(this.calculateFaceDetection(data));
+                        fetch('https://smart-brain-api-server.herokuapp.com/image', {
+                            method: 'put',
+                            headers: {'Content-Type': 'application/json'},
+                            body: JSON.stringify({id: this.state.user.id})
+                        })
+                            .then(response => response.json())
+                            .then(count => {
+                                    this.setState(Object.assign(this.state.user, {entries: count}))
+                                }
+                            ).catch(console.log);
+                    }
+
+                }).catch(err => console.log(err));
     };
 
   render () {

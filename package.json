@@ -2,6 +2,7 @@
   "name": "smart-brain",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://kelvinforteta.github.io/smart-brain-app-reactjs/",
   "dependencies": {
     "clarifai": "^2.9.1",
     "react": "^16.10.2",
