@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/smart-brain-app-reactjs/static/css/main.b36f9452.chunk.css",
+    "main.js": "/smart-brain-app-reactjs/static/js/main.2375d447.chunk.js",
+    "main.js.map": "/smart-brain-app-reactjs/static/js/main.2375d447.chunk.js.map",
+    "runtime-main.js": "/smart-brain-app-reactjs/static/js/runtime-main.0d34472e.js",
+    "runtime-main.js.map": "/smart-brain-app-reactjs/static/js/runtime-main.0d34472e.js.map",
+    "static/css/2.eb45ad44.chunk.css": "/smart-brain-app-reactjs/static/css/2.eb45ad44.chunk.css",
+    "static/js/2.57927969.chunk.js": "/smart-brain-app-reactjs/static/js/2.57927969.chunk.js",
+    "static/js/2.57927969.chunk.js.map": "/smart-brain-app-reactjs/static/js/2.57927969.chunk.js.map",
+    "index.html": "/smart-brain-app-reactjs/index.html",
+    "precache-manifest.f388ee15f75ef4d5de4d4523131f7a00.js": "/smart-brain-app-reactjs/precache-manifest.f388ee15f75ef4d5de4d4523131f7a00.js",
+    "service-worker.js": "/smart-brain-app-reactjs/service-worker.js",
+    "static/css/2.eb45ad44.chunk.css.map": "/smart-brain-app-reactjs/static/css/2.eb45ad44.chunk.css.map",
+    "static/css/main.b36f9452.chunk.css.map": "/smart-brain-app-reactjs/static/css/main.b36f9452.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d34472e.js",
+    "static/css/2.eb45ad44.chunk.css",
+    "static/js/2.57927969.chunk.js",
+    "static/css/main.b36f9452.chunk.css",
+    "static/js/main.2375d447.chunk.js"
+  ]
+}
